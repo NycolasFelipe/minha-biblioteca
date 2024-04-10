@@ -1,7 +1,7 @@
 # import OS module
 import os
 
-# Get the list of all files and directories
+# get the list of all files and directories
 folder = input("Qual conteúdo? ")
 path = "C:/Users/T-GAMER/Desktop/github/narkovia-ficha/src/content/" + folder #<- Exemplo
 dir_list = os.listdir(path)
