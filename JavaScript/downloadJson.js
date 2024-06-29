@@ -1,28 +1,36 @@
-export default function downloadJson() {
-  //Build a JSON object
-  let object = {
-    property: "property"
-  }
-
-  //Convert JSON to string
+/**
+ * This function triggers a download of a provided JSON object as a file named after
+ * the `filename` parameter in the user's browser.
+ * 
+ * @param {object} object JSON object to be downloaded.
+ * @param {string} filename The desired filename for the downloaded file (without the ".json").
+ * 
+ * @example
+ * const myObject = { data: "This is some data to download" };
+ * const desiredFilename = "myData";
+ * 
+ * downloadJson(myObject, desiredFilename);  // Downloads "myData.json"
+ * 
+ * @author Nycolas Felipe
+ */
+const downloadJson = (object, filename) => {
+  // Convert JSON object to string
   let json = JSON.stringify(object);
 
-  //Convert JSON string to BLOB
+  // Convert JSON string to BLOB
   json = [json];
   let blob = new Blob(json, { type: "text/plain;charset=utf-8" });
 
-  //Check the Browser
-  let isIE = false || !!document.documentMode;
-  if (isIE) {
-    window.navigator.msSaveBlob(blob, `object`);
-  } else {
-    let url = window.URL || window.webkitURL;
-    let link = url.createObjectURL(blob);
-    let a = $("<a />");
-    a.attr("download", `object.json`);
-    a.attr("href", link);
-    $("body").append(a);
-    a[0].click();
-    $("body").remove(a);
-  }
+  // Download JSON
+  const url = window.URL || window.webkitURL;
+  const link = url.createObjectURL(blob);
+  const anchor = document.createElement('a');
+  anchor.href = link;
+  anchor.download = filename + '.json';
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+  url.revokeObjectURL(link); // Revoke temporary URL after download
 }
+
+export default downloadJson;

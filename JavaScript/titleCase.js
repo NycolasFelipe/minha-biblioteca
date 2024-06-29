@@ -1,4 +1,16 @@
-function titleCase(str) {
+/**
+ * This function converts a string to the title case format.
+ * 
+ * @param {string} str String to be capitalized.
+ * @returns {string}
+ * 
+ * @example
+ * const titleCasedText = titleCase("this is a sentence");
+ * console.log(titleCasedText); // Output: "This Is A Sentence"
+ * 
+ * @author Nycolas Felipe
+ */
+const titleCase = (str) => {
   if (!str instanceof String) {
     return console.log("Provided value is not a string.");
   }
@@ -9,4 +21,4 @@ function titleCase(str) {
   return str.join(' ');
 }
 
-module.exports = titleCase;
+export default titleCase;
