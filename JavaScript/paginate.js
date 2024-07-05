@@ -43,7 +43,7 @@ const paginate = (data, dataPerPage = 8) => {
   if (Array.isArray(data)) {
     if (Number.isInteger(dataPerPage)) {
       const totalDataCount = data.length;
-      const pageCount = Math.ceil(totalDataCount, dataPerPage);
+      const pageCount = Math.ceil(totalDataCount / dataPerPage);
       const paginatedData = Array.from({ length: pageCount }, (_, index) => {
         const start = index * dataPerPage;
         return data.slice(start, start + dataPerPage);
