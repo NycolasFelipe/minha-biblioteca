@@ -1,0 +1,30 @@
+.search_container {
+    position: relative;
+}
+
+.select {
+    width: 20%;
+    margin: 0 5px 15px 0;
+    border: solid 1px #aaa;
+    cursor: pointer;
+}
+
+.input {
+    position: relative;
+    width: 20%;
+}
+
+.input button {
+    background: #fff !important;
+    color: #aaa !important;
+    transition: 0.3s ease;
+    position: absolute;
+    right: 2px;
+    top: -8px;
+    padding: 6px;
+}
+
+.input button:hover {
+    color: #757575 !important;
+    transition: 0.3s ease;
+}

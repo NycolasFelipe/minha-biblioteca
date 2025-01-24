@@ -1,0 +1,55 @@
+.react-table-lite-header {
+  width: 180px !important;
+  border-top: 0 !important;
+}
+
+.react-table-lite-header:last-of-type {
+  flex: 1;
+}
+
+.react-table-lite-pagination-item:hover {
+  color: var(--button-background-color);
+}
+
+.react-table-lite-pagination-item {
+  user-select: none;
+}
+
+.react-table-lite-pagination-active-item {
+  font-weight: 600 !important;
+  color: var(--button-background-color);
+  user-select: none;
+}
+
+.react-table-lite-pagination-toggle-icon-right,
+.react-table-lite-pagination-toggle-icon-left,
+.react-table-lite-pagination-jump-icon-left,
+.react-table-lite-pagination-jump-icon-right {
+  fill: transparent;
+}
+
+.react-table-lite-pagination-toggle-icon-right:hover,
+.react-table-lite-pagination-toggle-icon-left:hover,
+.react-table-lite-pagination-jump-icon-left:hover,
+.react-table-lite-pagination-jump-icon-right:hover {
+  filter: invert(28%) sepia(94%) saturate(1475%) hue-rotate(237deg) brightness(89%) contrast(80%);
+
+}
+
+.react-table-lite-pagination-jump-icon-left,
+.react-table-lite-pagination-jump-icon-right {
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+.react-table-lite-pagination-toggle-icon-right,
+.react-table-lite-pagination-toggle-icon-left {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z'/%3E%3C/svg%3E");
+}
+
+
+.react-table-lite-pagination-jump-icon-left,
+.react-table-lite-pagination-jump-icon-right {
+  background-image: url("data:image/svg+xml,%3Csvg%20stroke%3D%22currentColor%22%20fill%3D%22none%22%20stroke-width%3D%222%22%20viewBox%3D%220%200%2024%2024%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20height%3D%22200px%22%20width%3D%22200px%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpolyline%20points%3D%2213%2017%2018%2012%2013%207%22%3E%3C%2Fpolyline%3E%3Cpolyline%20points%3D%226%2017%2011%2012%206%207%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
+}
