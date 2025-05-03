@@ -1,0 +1,76 @@
+.modal h5 {
+  display: flex;
+  gap: 6px;
+  line-height: 1.4;
+}
+
+.modalBody div,
+.modalBody div p {
+  margin-bottom: 0 !important;
+}
+
+.modal button {
+  border: none;
+  box-shadow: none !important;
+}
+
+.btnConfirm {
+  background: var(--btn-bg-color);
+  transition: 0.3s ease;
+}
+
+.btnConfirm:hover {
+  background: var(--btn-bg-color-hover);
+  transition: 0.3s ease;
+}
+
+/* Animações */
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .modalDialog {
+    margin: 0;
+    align-items: flex-end;
+    height: 100vh;
+    animation: slideIn 0.3s ease-out forwards;
+  }
+
+  .modalDialog.closing {
+    animation: slideOut 0.3s ease-in forwards;
+  }
+
+  .modalContent {
+    border-radius: 0;
+    width: 100%;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+  }
+
+  /* Melhora o visual do backdrop */
+  .modalBackdrop {
+    background-color: #00000080;
+    transition: opacity 0.3s ease;
+  }
+}

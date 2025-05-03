@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Background */
+  --bg-color: #4377d6;
+  --bg-color-body: #fff;
+  --bg-color-lightBlue: #E9F6FF;
+
+  /* Button */
+  --btn-bg-color: #4a83e6;
+  --btn-bg-color-hover: #2B61BE;
+  --btn-bg-color-hover-alt: #2b61be20;
+  --btn-bg-color-green: #30955e;
+  --btn-bg-color-green-hover: #38ad6f;
+  --btn-bg-color-grey: #959595;
+  --btn-bg-color-grey-hover: #95959518;
+  --btn-bg-color-red: #d9534f;
+  --btn-bg-color-disabled: #9da5a9;
+  --btn-font-color: #fff;
+
+  /* Content */
+  --font-color: #0a0a0a;
+  --font-color-alternative: #5d5b5b;
+  --font-color-alternative-2: #474343;
+  --font-family: "Montserrat", sans-serif;
+
+  /* Typography */
+  --font-size-title: 24px;
+  --font-size-title-big: 32px;
+  --font-size-subtitle: 22px;
+  --font-size-body: 18px;
+  --font-size-small: 16px;
+  --font-size-very-small: 14px;
+  --font-size-extra-small: 12px;
+
+  --font-line-height-title: 32px;
+  --font-line-height-subtitle: 24px;
+  --font-line-height-body: 22px;
+  --font-line-height-small: 18px;
+  --font-weight-title: 600;
+  --font-weight-subtitle: 500;
+  --font-weight-body: normal;
+  --font-weight-small: normal;
+
+  /* Box shadow */
+  --box-shadow: 0 1px 12px #0000002f;
+  --box-shadow-light: 0 1px 1px #0000001f;
+
+  /* Container */
+  --max-width: 1320px;
+
+}
+
+/* Estilo aplicável a todas as páginas */
+.page {
+  min-height: calc(100vh - 190px);
+}
+
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and default padding */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+/*
+  Typographic tweaks
+  Add accessible line-height
+  Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  background: var(--bg-color-body);
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+span,
+small,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input {
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  overflow-wrap: break-word;
+  color: var(--font-color);
+}
+
+h1 {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-title);
+  text-transform: uppercase;
+  pointer-events: none;
+  color: var(--font-color-alternative);
+}
+
+h2 {
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-subtitle);
+}
+
+p {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+}
+
+small {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-small);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Button */
+button {
+  font-weight: 500;
+}
+
+.app-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%);
+}
+
+.app-loading img {
+  width: 40px !important;
+}

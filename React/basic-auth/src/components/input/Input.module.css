@@ -1,0 +1,32 @@
+.label {
+  margin-bottom: 0 !important;
+}
+
+.input_group {
+  position: relative;
+}
+
+.input_group input {
+  border-top-right-radius: 6px !important;
+  border-bottom-right-radius: 6px !important;
+}
+
+.password_toggle {
+  position: relative;
+  top: 28px !important;
+  font-size: 24px;
+}
+
+.password_toggle:hover,
+.password_toggle:active {
+  background: transparent !important;
+}
+
+.password_toggle svg {
+  transition: 0.3s ease;
+}
+
+.password_toggle:hover svg {
+  color: var(--btn-bg-color-hover) !important;
+  transition: 0.3s ease;
+}

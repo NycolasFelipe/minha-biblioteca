@@ -1,0 +1,30 @@
+.footer {
+  box-shadow: var(--box-shadow-light);
+  padding: 12px 0;
+  border-top: 1px solid #0000001f;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 18px;
+}
+
+.container h6 {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-title);
+  color: var(--font-color-alternative);
+  margin: 0;
+}
+
+.container p {
+  margin: 0;
+  font-size: var(--font-size-small);
+  filter: opacity(0.5);
+}
+
+.container strong {
+  font-weight: 600;
+}

@@ -1,0 +1,157 @@
+.navbar {
+  box-shadow: var(--box-shadow-light);
+  margin: 0 auto;
+  height: 75px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 18px;
+}
+
+.container .left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.container .left .icon {
+  width: 45px;
+}
+
+.container .left h1 {
+  margin-left: 12px;
+  margin-top: 8px;
+  color: var(--font-color-alternative-2);
+  text-transform: none;
+}
+
+.container .right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.container .right button {
+  gap: 8px;
+  border: none;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-subtitle);
+}
+
+.container .right .btn_cards {
+  display: flex;
+  align-items: center;
+
+  background: transparent;
+  color: var(--btn-bg-color);
+}
+
+.container .right .btn_cards .cards_text {
+  color: var(--btn-bg-color);
+  padding: 0px;
+  margin: 0px;
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.cart_number {
+  font-size: 12px;
+  background-color: var(--btn-bg-color-red);
+  width: 18px;
+  height: 18px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.container .right .btn_cards:hover {
+  background: var(--btn-bg-color-hover-alt);
+}
+
+.container .right .btn_cards .icon {
+  font-size: 24px;
+}
+
+.account_offCanvas{
+  color:var(--btn-bg-color-grey);
+  margin-left:  16px;
+  font-size: 24px;
+  order: -1;
+  display: none;
+  flex: 1;
+}
+
+.button_offCanvas{
+  cursor: pointer;
+}
+
+.offCanvas:hover{
+  background-color: var(--btn-bg-color-grey-hover);
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    padding: 12px 14px;
+  }
+
+  .container .left h1 {
+    font-size: var(--font-size-body);
+  }
+
+  .container .right .btn_cards .icon {
+    font-size: 24px;
+  }
+
+  .container .right .btn_cards .cards_text {
+    display: none;
+  }
+
+  .cartContainer {
+    position: relative;
+    right: 12px;
+  }
+
+  .account_offCanvas{
+    display: block;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .cartContainer {
+    position: relative;
+    right: 12px;
+  }
+
+}
+
+@media screen and (max-width:500px) {
+  .cartContainer {
+    position: relative;
+    right: 12px;
+  }
+  .account_offCanvas{
+    display: flex;
+    justify-content: flex-end;
+    order: 0;
+    flex:initial;
+   }
+  .container {
+    justify-content: space-around;
+  }
+  
+  .left h1{
+    display: none;
+  }
+
+}
