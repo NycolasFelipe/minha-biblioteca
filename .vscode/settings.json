@@ -1,0 +1,5 @@
+{
+  "typescript.validate.enable": false, // Desativa validação do TypeScript
+  "javascript.validate.enable": false, // Desativa validação do JavaScript
+  "eslint.enable": false // Desativa o ESLint
+}
