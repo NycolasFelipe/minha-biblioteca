@@ -9,7 +9,7 @@ repo_path = pathlib.Path(__file__).parent.resolve()
 repo = Repo.init(repo_path)
 git = repo.git
 index = repo.index
-origin = repo.remotes[0]
+origin = repo.remotes[0] if repo.remotes else None
 
 class colors:
     HEADER = '\033[95m'
@@ -24,10 +24,13 @@ class colors:
 
 # Função para verificar se há arquivos staged
 def has_staged_files():
-    return bool(repo.index.diff("HEAD"))
+    if repo.head.is_valid() and repo.head.commit:
+        return bool(repo.index.diff("HEAD"))
+    else:
+        return bool(repo.index.entries)
 
 # Apresentação do programa
-print(f"\n{'#'*20} CONVENTIONAL COMMITS v2.0 {'#'*20}")
+print(f"\n{'#'*20} CONVENTIONAL COMMITS v2.1 {'#'*20}")
 print("\nDigite 0 em qualquer etapa para cancelar o commit.")
 
 # Verifica se há arquivos staged antes de prosseguir
@@ -135,8 +138,11 @@ while True:
     
     if confirm == "1":
         index.commit(commit_message)
-        origin.push()
-        print(colors.OKGREEN + "\nCommit e push realizado com sucesso.\n" + colors.ENDC)
+        if origin:
+            origin.push()
+            print(colors.OKGREEN + "\nCommit e push realizado com sucesso.\n" + colors.ENDC)
+        else:
+            print(colors.WARNING + "\nCommit realizado localmente (sem remote para push).\n" + colors.ENDC)
         quit()
     elif confirm == "2":
         continue
